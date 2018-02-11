@@ -158,6 +158,21 @@
     <article id="post-hexo使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/11/hexo使用/">hexo 使用</a>
+    </h1>
+  
+
+        
+        <a href="/2018/02/11/hexo使用/" class="archive-article-date">
+  	<time datetime="2018-02-11T03:01:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-11</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
@@ -167,7 +182,7 @@
 <h3 id="三-编写blog："><a href="#三-编写blog：" class="headerlink" title="(三)编写blog："></a>(三)编写blog：</h3></blockquote>
 <ul>
 <li>可以直接写好md文件，放在 <strong><em>source_posts</em></strong> 下面</li>
-<li>也可以使用下面的命令生成文件：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new fileName</span><br></pre></td></tr></table></figure>
+<li>也可以使用下面的命令生成文件：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new post &quot;blogName&quot;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -195,7 +210,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/09/hexo使用/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/02/11/hexo使用/">展开全文 >></a>
         </p>
       
 
@@ -259,6 +274,105 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/02/09/first-blog/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-thmeleaf使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/09/thmeleaf使用/">thmeleaf使用</a>
+    </h1>
+  
+
+        
+        <a href="/2018/02/09/thmeleaf使用/" class="archive-article-date">
+  	<time datetime="2018-02-09T03:01:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#thmeleaf 学习笔记</p>
+<p>##简介：</p>
+<blockquote>
+<p>一个类似于jsp和freemarker的模板引擎，<br>  优点是不用运行服务器也可以查看,<br>  是spring-boot官方推荐的引擎</p>
+<p>官方示例中文【不是很准确】： <a href="https://www.cnblogs.com/jiangchao226/p/5900222.html" target="_blank" rel="noopener">https://www.cnblogs.com/jiangchao226/p/5900222.html</a>  </p>
+<p>thmeleaf使用： <a href="https://www.cnblogs.com/nuoyiamy/p/5591559.html" target="_blank" rel="noopener">https://www.cnblogs.com/nuoyiamy/p/5591559.html</a><br>thmeleaf的使用： <a href="https://www.jianshu.com/p/a7056b023df0" target="_blank" rel="noopener">https://www.jianshu.com/p/a7056b023df0</a><br>Spring-boot精华：<a href="https://github.com/Aslan007/Spring-Boot-Reference-Guide" target="_blank" rel="noopener">https://github.com/Aslan007/Spring-Boot-Reference-Guide</a></p>
+<p>##使用</p>
+</blockquote>
+<p>###第一步：引入依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;html lang=&quot;en&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>###【一】模板（template fragments）的使用</p>
+<blockquote>
+<p>(一) 定义模板<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html SYSTEM &quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd&quot;&gt;</span><br><span class="line">&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;</span><br><span class="line">      xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div th:fragment=&quot;copyright&quot;&gt;</span><br><span class="line">      © 2016 xxx</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>(二) 使用模板,可以使用 <strong>th:include</strong> 或者 <strong>th:replace</strong>来使用模板</p>
+<p> 引用格式：<strong>模板名 :: fragmentName</strong> ,如下</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  ...</span><br><span class="line">  &lt;div th:include=&quot;footer :: copyright&quot;&gt;&lt;/div&gt; </span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>###【二】fragments模板传参</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div th:fragment=&quot;frag (onevar,twovar)&quot;&gt; </span><br><span class="line">  &lt;p th:text=&quot;$&#123;onevar&#125; + &apos; - &apos; + $&#123;twovar&#125;&quot;&gt;...&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>传入参数调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div th:include=&quot;::frag ($&#123;value1&#125;,$&#123;value2&#125;)&quot;&gt;...&lt;/div&gt;</span><br><span class="line">&lt;div th:include=&quot;::frag (onevar=$&#123;value1&#125;,twovar=$&#123;value2&#125;)&quot;&gt;...&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>####【2.1】th:assert 断言,判断模板参数</p>
+<blockquote>
+<p>我们可以通过th:assert来方便的验证模板参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;header th:fragment=&quot;contentheader(title)&quot; th:assert=&quot;$&#123;!#strings.isEmpty(title)&#125;&quot;&gt;...&lt;/header&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>###【三】不定义fragments，使用dom选择器完成模板功能</p>
+<blockquote>
+<p>（一）模板的定义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;copy-section&quot;&gt;</span><br><span class="line"> &amp;copy; xxxxxx</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>（二）使用：<br>使用dom选择器来加载模板<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line"> ...</span><br><span class="line"> &lt;div th:include=&quot;footer :: #copy-section&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"> &lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>###【四】th:include 和 th:replace区别</p>
+<p>###th:include 是加载模板的内容，而th:replace则会替换当前标签为模板中的标签</p>
+<blockquote>
+<p>同样的使用模板<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer th:fragment=&quot;copy&quot;&gt; </span><br><span class="line">&amp;copy; 2016</span><br><span class="line">&lt;/footer&gt;</span><br></pre></td></tr></table></figure></p>
+<p>两种方式加载：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt; </span><br><span class="line">  &lt;div th:include=&quot;footer :: copy&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div th:replace=&quot;footer :: copy&quot;&gt;&lt;/div&gt;</span><br><span class="line"> &lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<p>返回如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt; </span><br><span class="line">   &lt;div&gt; &amp;copy; 2016 &lt;/div&gt; </span><br><span class="line">  &lt;footer&gt;&amp;copy; 2016 &lt;/footer&gt; </span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/02/09/thmeleaf使用/">展开全文 >></a>
         </p>
       
 
